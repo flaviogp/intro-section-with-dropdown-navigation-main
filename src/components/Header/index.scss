@@ -1,0 +1,113 @@
+header {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    font-size: 1.6rem;
+    color: $medium-gray;
+    position: relative;
+
+    nav {
+        ul {
+            display: flex;
+            justify-content: space-around;
+
+
+            li {
+                height: 100%;
+                align-items: center;
+                position: relative;
+                margin-right: 20px;
+
+                .item-container {
+                    height: 100%;
+
+                    img {
+                        width: 12px;
+                        height: 8px;
+                        margin-left: 5px;
+                    }
+
+                    &:hover {
+                        cursor: pointer;
+                        color: $almost-black;
+
+                        img {
+                            fill: $almost-black
+                        }
+                    }
+                }
+
+                .drop-menu {
+                    position: absolute;
+                    top: calc(100% + 20px);
+                    background-color: #fff;
+                    padding: 20px 20px 0;
+                    box-shadow: 1px 1px 10px;
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+
+                    li{
+                        display: flex;
+                        gap: 10px;
+                        align-items: center;
+                        width: 100%;
+                        padding: 10px 0;
+
+                        &:hover{
+                            cursor: pointer;
+                            color: $almost-black
+                        }
+
+                    }
+
+                }
+                .menu-features{
+                    right: 0;
+                }
+                .menu-company{
+                    left: 0;
+                }
+            }
+        }
+
+        .buttons-container {
+            position: absolute;
+            top: 0;
+            right: 20px;
+            width: 20rem;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+    
+            button {
+                padding: 10px 15px;
+                border-radius: 10px;
+                border: .15rem solid $medium-gray;
+                background-color: transparent;
+                color: inherit;
+                font-size: inherit;
+    
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+    
+            a:hover,
+            button:hover {
+                font-weight: 700;
+                color: $almost-black;
+                border-color: $almost-black;
+            }
+        }
+
+    }
+
+    .hamburguer-menu{
+        display: none;
+    }
+
+}

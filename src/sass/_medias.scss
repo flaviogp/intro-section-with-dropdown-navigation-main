@@ -1,0 +1,185 @@
+
+@media (max-width: 800px){
+
+    header {
+
+
+        nav{
+            width: 0;
+            overflow: hidden;
+            .menu-flux{
+                width: 0;
+                overflow: hidden;
+                .buttons-container {
+                    position: static;
+                }
+    
+            }   
+        }
+
+        .menu-active{
+            transition: width .4s ease-in-out;
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            right: 0;
+            top: 0;
+            width: 100vw;
+            min-height: 100vh;
+            background-image: linear-gradient(to right, rgba(0,0,0,0.7) 40%, #fff 30%);
+            padding: 100px 25px 25px ;
+            align-items: end;
+
+            .menu-flux{
+                width: 50%;
+                overflow: hidden;
+
+                ul {
+                    flex-direction: column;
+                    width: max-content;
+                    margin-right: 30%;
+                    li {
+                        height: max-content;
+                        margin-right: 0;
+                        .drop-menu {
+                            position: static;
+                            background-color: transparent;
+                            box-shadow: none;
+        
+                        }
+    
+                        &:not(:last-child){
+                            margin-bottom:  25px;
+                        }
+                    }
+                }
+        
+                .buttons-container {
+                    margin-top: 20px;
+                    height: max-content;
+                    align-self: center;
+                    flex-direction: column;
+                    gap: 20px;
+    
+                    a, button {
+                        width: 100%;
+                        text-align: center;
+                    }
+                }
+    
+
+            } 
+    
+        }
+    
+        .hamburguer-menu{
+            position: absolute;
+            right: 30px;
+            top: 0;
+            display: flex;
+            height: 100%;
+            // width: max-content;
+            align-items: center;
+    
+            input[type="checkbox"]{
+                position: relative;
+                appearance: none;
+                &::before{
+                    content: url(../assets/images/icon-menu.svg);
+                    position: absolute;
+                    left: calc(100% - 22px);
+                }
+                &:hover{
+                    cursor: pointer;
+                }
+                
+                &:checked::before{
+                    content: url(../assets/images/icon-close-menu.svg);
+                    top: 10px;
+                }
+            }
+        }
+    
+    }
+
+}
+
+
+@media (max-width: 850px) and  (min-width: 320px){
+    main{
+        flex-direction: column-reverse;
+        align-items: center;
+        overflow: hidden;
+        height: max-content;
+        
+        .image-container{
+            background-image: url(../assets/images/image-hero-mobile.png);
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            min-width: 100%;
+            min-height: 400px;
+        }
+        
+        
+        .content-main{
+            min-width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            text-align: center;
+            gap: 30px;
+            h1{
+                margin-top: 0;
+                font-size: 6rem;
+                color: $almost-black;
+            }
+            p{
+                max-width: 90%;
+            }
+            button{
+                border: none;
+                background-color: $almost-black;
+                color: $almost-white;
+                padding: 15px 20px;
+                border-radius: 10px;
+                font-size: 1.8rem;
+                transition: all .4s;
+                &:hover{
+                    cursor: pointer;
+                    background-color: $almost-white;
+                    color: $almost-black;
+                    border: 1px solid $almost-black;
+                }
+            }
+            
+            .brands{
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-wrap: wrap;
+                // justify-self: flex-end;
+            }
+        }
+        
+    }
+}
+
+@media (max-width: 1080px){
+    main{
+        .content-main{
+            h1{
+                font-size: 6rem;
+            }
+        }
+    }
+}
+@media (max-width: 910px){
+    main{
+        .content-main{
+            h1{
+                font-size: 5rem;
+            }
+        }
+    }
+}
